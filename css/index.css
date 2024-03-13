@@ -1,0 +1,177 @@
+body {
+    overflow-y: auto; /*Rolamento no eixo Y*/
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; /* Removemos o preenchimento do corpo */
+    background-color: #f0f0f0;
+}
+
+
+
+.photo {
+    position: absolute;
+    width: 600px; /* Ajuste o tamanho da div conforme necessário */
+    height: 600px; /* Ajuste o tamanho da div conforme necessário */
+    background-color: #000000; /* Cor de fundo da div circular */
+    border-radius: 50%; /* Torna a div circular */
+    top: calc(50% - 300px); /* Posiciona a div no meio verticalmente */
+    left: calc(80% - 300px); /* Posiciona a div no meio horizontalmente */
+    background-image: url('../image/photo.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 1);
+}
+
+h1{
+    color: white;
+    position: absolute; /*Posição do elemento no elemento pai*/
+    top: calc(20%); /*Posição do elemento em relação à altura, do topo ao fundo*/
+    left: calc(10%); /*Posição do elemento em relação à largura, da esquerda para a direita*/
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: #000000;
+}
+
+h2{
+    color: white;
+    position: absolute;
+    top: calc(30%);
+    left: calc(10%);
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: #000000;
+}
+
+h3{
+    color: white;
+    position: absolute;
+    top: calc(38%);
+    left: calc(10%);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: #000000;
+}
+
+h4{
+    position: absolute;
+    top: 95%;
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 120px;
+    overflow-x: auto; /*Rolagem sobre o eixo Y*/
+    white-space: nowrap; /*Determina que o texto só será quebrado se houver um break roll*/
+    color: rgba(252, 0, 0, 0.5);
+    padding: 10px;
+    transition: left 0.5s; /* Adiciona uma transição suave */
+    z-index: 9999; /* Certifica de que o h4 está acima de outros elementos */
+}
+
+
+.photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.abaixo {
+    background-color: white; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    background-image: url('../image/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixa a imagem de fundo */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.janela1 {
+        /* Estilos para o conteúdo da janela */
+        text-align: center;
+        color: white; /* Cor do texto */
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.continua{
+    color: white;
+    position: absolute;
+    top: calc(43%);
+    left: calc(10%);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: #000000;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar li {
+    float: left; /*Permite que os elementos fluam ao redor desse elemento, pela direita*/
+}
+
+#navbar li a {
+    display: block; /*Faz com que esse elemento se estenda como bloco, ocupando o mesmo espaço que o elemento pai*/
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 2px;
+    background-color: red;
+    scroll-behavior: smooth; /*verificar essa parte depois*/
+    transition: width 0.3s ease; /*Faz com que a transição de movimento seja feita de 0.3 em 0.3 segundos*/
+}
+
+#about{
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/fundo2.png);
+}
+
+.text2{
+    color: rgb(0, 0, 0);
+    position: absolute; /*Posição do elemento no elemento pai*/
+    top: calc(110%); /*Posição do elemento em relação à altura, do topo ao fundo*/
+    left: calc(10%); /*Posição do elemento em relação à largura, da esquerda para a direita*/
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: #000000;
+}
