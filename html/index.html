@@ -15,10 +15,10 @@
         
         <!--Partes do site-->
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="homea">Home</a></li>
+            <li><a href="#about" class="abouta">About</a></li>
+            <li><a href="#projects" class="projectsa">Projects</a></li>
+            <li><a href="#contact" class="contacta">Contact</a></li>
         </ul>
         
         <!--O indicator mostra para o js onde está meu scroll-->
@@ -45,13 +45,31 @@
             <h4 class="scroll">SCROLL↓</h4>    
             </div>
          </div>
-    </section><br>
+    </section>
 
     <!--Sessão sobre mim-->
     <section id="about">
-        <div class="about">
-            <h1 class="text2">Ok, quando eu fui, não era assim</h1>
-        </div>
+        <div class="circle" id="circle1" data-circle="circle1"></div>
+        <div class="circle" id="circle2" data-circle="circle2"></div>
+        <div class="circle" id="circle3" data-circle="circle3"></div>
+        <div class="circle" id="circle4" data-circle="circle4"></div>
+        <div class="circle" id="circle5" data-circle="circle5"></div>
+        
+        <!--Labels dos circles-->
+        <label for="circle1" id="c1"><b>Sobre mim</b></label>  
+        <label for="circle2" id="c2"><b>Carreira acadêmica</b></label>
+        <label for="circle3" id="c3"><b>Certificados</b></label>
+        <label for="circle4" id="c4"><b>Conhecimento</b></label>
+        <label for="circle5" id="c5"><b>Por que?</b></label>
+
+        <!--Conteúdo dos circles-->
+        <div class="conteudo" id="conteudo-circle1"></div>
+        <div class="conteudo" id="conteudo-circle2">Conteúdo do Circle 2</div>
+        <div class="conteudo" id="conteudo-circle3">Conteúdo do Circle 3</div>
+        <div class="conteudo" id="conteudo-circle4">Conteúdo do Circle 4</div>
+        <div class="conteudo" id="conteudo-circle5">Conteúdo do Circle 5</div>
+
+        <div class="line"></div>
     </section>
     
     <!--Sessão projetos-->

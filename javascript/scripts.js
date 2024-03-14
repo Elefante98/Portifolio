@@ -6,6 +6,8 @@ window.addEventListener("scroll", function() { //Cria um evento que chama uma fu
     h4Element.style.left = newPos + "px"; //Define a nova posição do elemento de classe scroll como newPos e especifica como pixels  
 });
 
+
+
 window.addEventListener('scroll', function() { //Cria um evento que chama uma função toda vez que a tela é rolada
     var sections = document.querySelectorAll('section'); //A variavel sections recebe todos os elementos sections do arquivo HTML
     var indicator = document.getElementById('indicator'); //A variavel indicator recebe o elemento indicator do arquivo HTML
@@ -21,3 +23,22 @@ window.addEventListener('scroll', function() { //Cria um evento que chama uma fu
         }
     });
 });
+
+const circles = document.querySelectorAll('.circle');
+
+circles.forEach((circle) => {
+    circle.addEventListener('mouseover', () => {
+        const circleName = circle.dataset.circle;
+        const conteudoElement = document.getElementById(`conteudo-${circleName}`);
+        conteudoElement.classList.add('show');
+    });
+
+    circle.addEventListener('mouseout', () => {
+        const circleName = circle.dataset.circle;
+        const conteudoElement = document.getElementById(`conteudo-${circleName}`);
+        conteudoElement.classList.remove('show');
+    });
+});
+
+
+

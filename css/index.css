@@ -28,7 +28,7 @@ h1{
     top: calc(20%); /*Posição do elemento em relação à altura, do topo ao fundo*/
     left: calc(10%); /*Posição do elemento em relação à largura, da esquerda para a direita*/
     font-size: 70px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
     box-shadow: #000000;
 }
 
@@ -64,6 +64,7 @@ h4{
     padding: 10px;
     transition: left 0.5s; /* Adiciona uma transição suave */
     z-index: 9999; /* Certifica de que o h4 está acima de outros elementos */
+    scroll-behavior: smooth;
 }
 
 
@@ -166,12 +167,131 @@ h1, h2, h3, h4 {
     background-image: url(../image/fundo2.png);
 }
 
-.text2{
-    color: rgb(0, 0, 0);
-    position: absolute; /*Posição do elemento no elemento pai*/
-    top: calc(110%); /*Posição do elemento em relação à altura, do topo ao fundo*/
-    left: calc(10%); /*Posição do elemento em relação à largura, da esquerda para a direita*/
-    font-size: 70px;
+.circle{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(250, 8, 8, 0.87);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#circle1{
+    position: absolute;
+    top: calc(180%);
+    left: calc(15%);
+    background-image: url('../image/sobremim.png');
+}
+
+#circle2{
+    position: absolute;
+    top: calc(120%);
+    left: calc(30%);
+    background-image: url('../image/academica.png');
+}
+
+#circle3{
+    position: absolute;
+    top: calc(160%);
+    left: calc(45%);
+    background-image: url('../image/certificado.png');
+}
+
+#circle4{
+    position: absolute;
+    top: calc(120%);
+    left: calc(60%);
+    background-image: url('../image/conhecimento.png');
+}
+
+#circle5{
+    position: absolute;
+    top: calc(180%);
+    left: calc(75%);
+    background-image: url('../image/pq.png');
+}
+
+#c1{
+    position: absolute;
+    top: calc(175%);
+    left: calc(13%);
+    font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: #000000;
+
+}
+
+#c2{
+    position: absolute;
+    top: calc(115%);
+    left: calc(25%);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#c3{
+    position: absolute;
+    top: calc(155%);
+    left: calc(43%);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#c4{
+    position: absolute;
+    top: calc(115%);
+    left: calc(57%);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#c5{
+    position: absolute;
+    top: calc(175%);
+    left: calc(74%);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo.show {
+    display: block;
+}
+
+.conteudo {
+    display: none;
+    background-color: rgb(65, 15, 15);
+    color: rgb(243, 214, 214);
+    padding: 10px;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+#conteudo-circle1{
+    position: absolute;
+    top: calc(180%);
+    left: calc(25%);
+}
+
+#conteudo-circle2{
+    position: absolute;
+    top: calc(120%);
+    left: calc(40%);
+}
+
+#conteudo-circle3{
+    position: absolute;
+    top: calc(160%);
+    left: calc(55%);
+}
+
+#conteudo-circle4{
+    position: absolute;
+    top: calc(120%);
+    left: calc(70%);
+}
+
+#conteudo-circle5{
+    position: absolute;
+    top: calc(180%);
+    left: calc(85%);
 }
