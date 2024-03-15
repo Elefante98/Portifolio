@@ -253,45 +253,71 @@ h1, h2, h3, h4 {
 }
 
 .conteudo.show {
-    display: block;
+    display: flex;
 }
 
 .conteudo {
     display: none;
-    background-color: rgb(65, 15, 15);
-    color: rgb(243, 214, 214);
+    background-color: rgba(190, 184, 184, 0.473);
+    color: rgb(0, 0, 0);
     padding: 10px;
     border-radius: 20px;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    justify-content: center;
 }
 
 #conteudo-circle1{
     position: absolute;
     top: calc(180%);
-    left: calc(25%);
+    left: calc(22%);
 }
 
 #conteudo-circle2{
     position: absolute;
     top: calc(120%);
-    left: calc(40%);
+    left: calc(37%);
 }
 
 #conteudo-circle3{
     position: absolute;
     top: calc(160%);
-    left: calc(55%);
+    left: calc(52%);
 }
 
 #conteudo-circle4{
     position: absolute;
     top: calc(120%);
-    left: calc(70%);
+    left: calc(67%);
 }
 
 #conteudo-circle5{
     position: absolute;
     top: calc(180%);
-    left: calc(85%);
+    left: calc(82%);
+}
+
+.saibaMais{
+    width: 100px;
+    height: 40px;
+    background: #1ae707;
+    color: #000000;
+    border-radius: 10px;
+    position: absolute;
+    top: calc(85%);
+    left: calc(30%);
+}
+
+
+
+
+
+
+
+
+#projects{
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/fundo3.png);
 }

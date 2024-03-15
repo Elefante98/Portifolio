@@ -24,21 +24,26 @@ window.addEventListener('scroll', function() { //Cria um evento que chama uma fu
     });
 });
 
-const circles = document.querySelectorAll('.circle');
+const circleContainers = document.querySelectorAll('.circle-container');
 
-circles.forEach((circle) => {
-    circle.addEventListener('mouseover', () => {
-        const circleName = circle.dataset.circle;
+circleContainers.forEach((container) => {
+    let timeoutId;
+
+    container.addEventListener('mouseover', () => {
+        const circleName = container.querySelector('.circle').dataset.circle;
         const conteudoElement = document.getElementById(`conteudo-${circleName}`);
         conteudoElement.classList.add('show');
+        clearTimeout(timeoutId);
     });
 
-    circle.addEventListener('mouseout', () => {
-        const circleName = circle.dataset.circle;
-        const conteudoElement = document.getElementById(`conteudo-${circleName}`);
-        conteudoElement.classList.remove('show');
+    container.addEventListener('mouseout', (event) => {
+        // Verifica se o mouse sai tanto do círculo quanto do conteúdo
+        if (!container.contains(event.relatedTarget)) {
+            const circleName = container.querySelector('.circle').dataset.circle;
+            const conteudoElement = document.getElementById(`conteudo-${circleName}`);
+            timeoutId = setTimeout(() => {
+                conteudoElement.classList.remove('show');
+            }, 500);
+        }
     });
 });
-
-
-
